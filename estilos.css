@@ -1,0 +1,410 @@
+/* ==================== VARIABLES CSS ==================== */
+:root {
+    --primary: #1a73e8;
+    --primary-light: #e8f0fe;
+    --accent: #34a853;
+    --text-dark: #202124;
+    --text-light: #5f6368;
+    --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.82);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* ==================== RESET Y BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+/* ==================== BACKGROUND SHAPES ==================== */
+.bg-shape {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.shape-1 {
+    background: var(--accent);
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+}
+
+.shape-2 {
+    background: var(--primary);
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    right: -100px;
+}
+
+/* ==================== CONTAINER ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    text-align: center;
+    padding: 40px 0;
+    animation: fadeInDown 1s ease;
+}
+
+h1 {
+    font-size: 3.2rem;
+    background: -webkit-linear-gradient(45deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ==================== GLASS CARD ==================== */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* ==================== ESTILOS DE TEXTO Y ORACIONES ==================== */
+.prayer-content {
+    font-style: italic;
+    line-height: 1.8;
+    font-size: 1.12rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.prayer-line {
+    margin-bottom: 15px;
+}
+
+.prayer-highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ==================== GRID DECÁLOGO ==================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Decalogo items */
+.rule-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.rule-number {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(26, 115, 232, 0.12); 
+    z-index: 0;
+    pointer-events: none;
+}
+
+.rule-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para información desplegable */
+.rule-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+    background: var(--primary-light);
+    border-radius: 10px;
+    padding: 0 15px;
+    margin-top: 0;
+}
+
+.rule-detail.open {
+    max-height: 500px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.rule-detail p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    font-style: normal;
+}
+
+.toggle-detail {
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 0.85rem;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+}
+
+.toggle-detail:hover {
+    color: var(--accent);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.open {
+    transform: rotate(180deg);
+}
+
+/* Sección de información */
+.info-section {
+    padding: 20px;
+    overflow: visible;
+}
+
+.info-section h2 {
+    margin-bottom: 25px;
+    font-size: 1.7rem;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 1.05rem;
+    line-height: 2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info-section p strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.info-section p em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+/* Destacar primer párrafo */
+.info-section p:first-of-type {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Separador visual entre párrafos importantes */
+.info-section p:nth-of-type(3)::after,
+.info-section p:nth-of-type(5)::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* ==================== SEPARADOR DE SECCIONES ==================== */
+.section-divider {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    gap: 20px;
+}
+
+.divider-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    opacity: 0.4;
+}
+
+.divider-text {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.divider-text i {
+    font-size: 1.1rem;
+}
+
+/* ==================== ANIMACIONES ==================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== SECCIONES COLAPSABLES ==================== */
+.collapsible-section .section-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    padding: 10px 0;
+    user-select: none;
+}
+
+.collapsible-section .section-header:hover {
+    color: var(--primary);
+}
+
+.section-toggle-icon {
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    font-size: 1.2rem;
+}
+
+.section-toggle-icon.open {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.section-content.open {
+    max-height: 6000px;
+}
+
+/* Altura específica para secciones informativas (más altas) */
+.section-content.info-section.open {
+    max-height: 15000px;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .prayer-content {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .rule-number {
+        font-size: 3rem;
+        right: 10px;
+    }
+
+    .info-section {
+        padding: 25px;
+    }
+
+    .info-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .info-section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .info-section p:first-of-type {
+        font-size: 0.92rem;
+    }
+
+    .rule-detail p {
+        font-size: 0.85rem;
+    }
+
+    .glass-card {
+        padding: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}

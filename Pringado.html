@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soy Pringado | Hakuna Lifestyle</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    
+    <!-- Meta Tags para Redes Sociales -->
+    <meta name="description" content="Hakuna: Familia eucarística JMJ 2013. Vivir arrodillados ante el misterio y ante cada rostro. Descubre el Decálogo del Pringado y el estilo de vida Hakuna.">
+    
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="Soy Pringado | Hakuna Lifestyle">
+    <meta property="og:description" content="Hakuna: Familia eucarística JMJ 2013. Vivir arrodillados ante el misterio y ante cada rostro.">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Soy Pringado | Hakuna Lifestyle">
+    <meta name="twitter:description" content="Hakuna: Familia eucarística JMJ 2013. Vivir arrodillados ante el misterio y ante cada rostro.">
+    <meta name="twitter:image" content="logo.jpg">
+    
+    <!-- Fonts y Estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- ==================== FORMAS DE FONDO ==================== -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="container">
+
+        <!-- ==================== CABECERA ==================== -->
+        <header>
+            <h1>Soy Pringado</h1>
+            <p class="subtitle">
+                "Ama la vida que se te ha dado"<br>
+                <strong>Hakuna:</strong> Familia Eucarística JMJ 2013 Papa Francisco.
+            </p>
+        </header>
+
+        <!-- ==================== ORACIÓN AMANECER ==================== -->
+        <section id="oracion-inicio">
+            <div class="glass-card collapsible-section">
+                <h2 class="section-header" onclick="toggleSection('oracion-inicio-content')">
+                    <i class="fas fa-sun"></i> Empezar el día 
+                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-inicio-content"></i>
+                </h2>
+                <div class="section-content" id="oracion-inicio-content">
+                <div class="prayer-content">
+                    <p class="prayer-line">
+                        Oh Señora mía y Madre mía, yo me ofrezco por completo a ti,
+                        y en prueba de mi amor de hijo te consagro en este día:
+                        mis ojos, mis oídos, mi lengua y mi corazón, en una palabra todo mi ser,
+                        ya que soy todo tuyo, Oh Madre de bondad, guárdame y defiéndeme
+                        como cosa y posesión tuya.
+                    </p>
+                    <p class="prayer-highlight">Así sea.</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <span class="toggle-detail" onclick="toggleAlternative()">
+                        Oración alternativa <i class="fas fa-chevron-down toggle-icon" id="icon-alt"></i>
+                    </span>
+                    <div class="rule-detail" id="alternative-prayer">
+                        <h4 style="margin-bottom: 10px; color: var(--primary);">Oración para la mañana - TODO</h4>
+                        <p style="font-style: italic; text-align: center;">
+                            Padre, pon tu Espíritu sobre mí.<br>
+                            Aquí estoy, aquí me tienes.<br>
+                            Gracias por la vida.<br>
+                            Que la viva siendo todo yo,<br>
+                            todo libre, todo entregado.<br>
+                            Todo tú, todo dado, todo alegre.<br>
+                            Todo amante, todo amado,<br>
+                            todo arrodillado.<br>
+                            Todo hijo, todo hermano, todo padre.<br>
+                            Todo disfrutón, todo mariano,<br>
+                            todo por todos.<br>
+                            Que viva todo... con toda el alma.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ORACIÓN DEL PRINGADO ==================== -->
+        <section id="oracion-pringado">
+            <div class="glass-card collapsible-section">
+                <h2 class="section-header" onclick="toggleSection('oracion-pringado-content')">
+                    <i class="fas fa-praying-hands"></i> Oración del Pringado 
+                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-pringado-content"></i>
+                </h2>
+                <div class="section-content" id="oracion-pringado-content">
+                <div class="prayer-content">
+                    <p class="prayer-line">Yo me entrego a ti, mi buen Dios, porque quiero pringarme por tu Iglesia
+                        siguiendo, junto a los demás miembros, en comunión con ellos, el estilo de vida de Hakuna.</p>
+                    <hr style="border:0; border-top:1px solid rgba(0,0,0,0.05); margin: 15px 0;">
+
+                    <p class="prayer-line">Señor, me arrodillaré ante ti en la Hostia,<br>
+                        <span class="prayer-highlight">danos una vida de rodillas ante el misterio y ante cada
+                            rostro.</span>
+                    </p>
+
+                    <p class="prayer-line">Señor, me abriré a los alejados,<br>
+                        <span class="prayer-highlight">contágianos Tú la pasión por que no se pierda ninguno.</span>
+                    </p>
+
+                    <p class="prayer-line">Señor, te buscaré vivo en el Evangelio, liturgia y sacramentos,<br>
+                        <span class="prayer-highlight">muéstrate como nuestro pobre loco.</span>
+                    </p>
+
+                    <p class="prayer-line">Señor, sonreiré y miraré a los ojos,<br>
+                        <span class="prayer-highlight">recuérdanos que no hemos venido a criticar ni a juzgar sino a
+                            salvar.</span>
+                    </p>
+
+                    <p class="prayer-line">Señor, abrazaré cada realidad con la no-medida de la cruz,<br>
+                        <span class="prayer-highlight">devuélvenos la unidad, y transfigura ya nuestra carne.</span>
+                    </p>
+
+                    <p class="prayer-line">Señor, iré a las fiestas buscando que sean momentos de Vida,<br>
+                        <span class="prayer-highlight">haz que te encontremos sufriente en los sedientos de
+                            placer.</span>
+                    </p>
+
+                    <p class="prayer-line">Señor, agradeceré tu confianza cada nuevo día,<br>
+                        <span class="prayer-highlight">que un profundo sentido de tu presencia haga de cada día una
+                            fiesta.</span>
+                    </p>
+
+                    <p class="prayer-line"><strong>María, madre de Hakuna,</strong><br>
+                        que contigo solo sepamos decirle 'Sí', que vivamos de rodillas, abrazados y abrazando, con
+                        alegre cara de resucitados, y recuérdanos rezar todos los días, todos por todos.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== DECÁLOGO DEL PRINGADO ==================== -->
+        <section id="decalogo">
+            <div class="glass-card collapsible-section">
+                <h2 class="section-header" onclick="toggleSection('decalogo-content')">
+                    <i class="fas fa-list-ol"></i> El Decálogo del Pringado 
+                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-decalogo-content"></i>
+                </h2>
+                <div class="section-content" id="decalogo-content">
+            <div class="grid-container">
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">1</div>
+                    <div class="rule-text">
+                        <h3>Sonrisa y Mirada</h3>
+                        <p class="rule-description">Sonreír cada día a todas las personas con las que me cruce, mirar a los ojos a
+                            quién trate.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(0)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-0"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-0">
+                            <p>La sonrisa y la mirada son el primer acto de reconocimiento del otro como persona. En Hakuna, sonreír no es un gesto vacío, sino una forma de decir "te veo, existes, y me alegro de encontrarte". Mirar a los ojos es encontrar a Jesús en cada rostro, es vivir arrodillados ante el misterio de cada persona. Esta regla nos recuerda que cada encuentro humano es sagrado.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">2</div>
+                    <div class="rule-text">
+                        <h3>Compasión</h3>
+                        <p class="rule-description">Dedicar con frecuencia, tiempo y corazón a los que sufren.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(1)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-1"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-1">
+                            <p>Hakuna nace del deseo de "que no se pierda ninguno". Esta regla nos llama a tener los ojos abiertos a quienes más sufren, a dedicar tiempo real -no solo buenas intenciones- a los heridos de la vida. Es vivir la pasión de Cristo por los alejados, los dolientes, los que nadie ve. No se trata de hacer obras sociales, sino de amar con las entrañas, de sufrir-con (com-pasión) los que están en la cruz.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">3</div>
+                    <div class="rule-text">
+                        <h3>Ofrecimiento</h3>
+                        <p class="rule-description">Comenzar cada día con un momento de oración en el que agradecer el don de la
+                            vida, y ofrecerme a Cristo para que viva y actúe entre los hombres ese día sirviéndose de mi persona. Y
+                            rezar todos los días, todos por todos.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(2)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-2"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-2">
+                            <p>La oración de la mañana es el acto fundante del día. Ofrecerse a Cristo es decirle: "Hoy quiero que seas Tú quien viva en mí". No somos nosotros los protagonistas, sino instrumentos para que Él actúe. El "todos por todos" refleja la dimensión comunitaria de Hakuna: nunca estamos solos, oramos en comunión. Agradecer el don de la vida es reconocer que cada día es un regalo inmerecido de Dios.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">4</div>
+                    <div class="rule-text">
+                        <h3>Cuidar un Sagrario</h3>
+                        <p class="rule-description">Cuidar un sagrario: escoger uno, el que se quiera, y de alguna manera hacerme
+                            cargo de que ese sagrario reciba cuidados y cariño.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(3)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-3"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-3">
+                            <p>Cuidar un sagrario es hacerse responsable de que Jesús Eucaristía no esté solo ni olvidado. Puede ser el de tu parroquia, una capilla, un hospital... Se trata de visitarlo, adornarlo, mantenerlo limpio, pero sobre todo de amarlo. Es el signo de nuestra vida de rodillas ante el misterio: Jesús se queda con nosotros en el Pan, y nosotros nos quedamos con Él. Este cuidado concreto nos ancla en la realidad de la Presencia Real.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">5</div>
+                    <div class="rule-text">
+                        <h3>Hora Santa</h3>
+                        <p class="rule-description">Participar de las Horas Santas, y fomentarlas allí donde me encuentre.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(4)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-4"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-4">
+                            <p>La Hora Santa es el "rato para parar el mundo" y estar con Jesús Sacramentado. Es el tiempo privilegiado de adoración, donde nos dejamos mirar por Él y Le miramos. Fomentar las Horas Santas significa contagiar esta pasión por la Eucaristía, invitar a otros, organizar espacios de adoración. Para Hakuna, la Hora Santa es el corazón de la vida espiritual, el lugar donde se recarga la batería para la misión.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">6</div>
+                    <div class="rule-text">
+                        <h3>Formación</h3>
+                        <p class="rule-description">Habitualmente estar leyendo un libro que me forme como cristiano. Si es posible,
+                            participar en un grupo de formación o Revolcadero, y leer cada día el evangelio del día, meditándolo.
+                        </p>
+                        <span class="toggle-detail" onclick="toggleDetail(5)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-5"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-5">
+                            <p>La formación no es un lujo intelectual, sino alimento para el alma. Leer el Evangelio diario y meditarlo es buscar a Cristo vivo en la Palabra. Los "Revolcaderos" son grupos de formación donde se profundiza en la fe, se comparte, se crece juntos. Leer buenos libros cristianos nos ayuda a entender mejor nuestra fe, a responder a las preguntas del mundo actual. La formación nos hace testigos más creíbles y fundamentados.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">7</div>
+                    <div class="rule-text">
+                        <h3>Sed de Amor</h3>
+                        <p class="rule-description">En el trabajo, fiestas y espacios de diversión, abrir los ojos a quiénes están
+                            sedientos de amor, y ofrecerme a Cristo para ser manantial de agua pura. Prohibido no disfrutar de
+                            seguir a Cristo, especialmente en las fiestas y espacios de diversión.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(6)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-6"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-6">
+                            <p>Hakuna no huye del mundo, sino que va a las "fiestas" a encontrar a Cristo sufriente en los sedientos de placer. Los espacios de diversión, el trabajo, las celebraciones son lugares de misión. Ser manantial de agua pura significa ofrecer el amor auténtico de Cristo en medio de búsquedas equivocadas. Y hacerlo con alegría: "prohibido no disfrutar", porque el Evangelio es Buena Noticia, no un castigo. Es llevar la fiesta de la Resurrección a todas partes.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">8</div>
+                    <div class="rule-text">
+                        <h3>Acompañamiento</h3>
+                        <p class="rule-description">Buscar una persona que me acompañe espiritualmente.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(7)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-7"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-7">
+                            <p>La dirección espiritual es fundamental para no perderse en el camino. Tener una persona -sacerdote, consagrado/a, laico maduro en la fe- que nos acompañe, nos corrija, nos anime, nos ayuda a discernir la voluntad de Dios. No somos capaces de ver nuestros propios puntos ciegos; necesitamos a alguien que nos ayude a crecer en santidad. Es un signo de humildad y de deseo real de conversión.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">9</div>
+                    <div class="rule-text">
+                        <h3>Sacramentos</h3>
+                        <p class="rule-description">Disfrutar y crecer de la vida de Cristo participando de la vida de los
+                            Sacramentos de la Confesión y la Eucaristía de manera frecuente.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(8)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-8"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-8">
+                            <p>Los sacramentos no son meros ritos, sino encuentros vivos con Cristo. La Eucaristía es la fuente y cumbre de la vida cristiana: comulgar es recibir a Jesús, hacerse uno con Él. La Confesión frecuente nos mantiene limpios, libres, en paz; es el abrazo misericordioso del Padre que siempre nos espera. "Disfrutar y crecer" indica que los sacramentos no son una obligación pesada, sino una alegría, un regalo que nos hace más humanos y más divinos a la vez.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="glass-card rule-card">
+                    <div class="rule-number">10</div>
+                    <div class="rule-text">
+                        <h3>Amor a María</h3>
+                        <p class="rule-description">Cuidar a María, madre de Hakuna, y acabar el día con un piropo, oración o
+                            canción a la Virgen María.</p>
+                        <span class="toggle-detail" onclick="toggleDetail(9)">
+                            Ver más <i class="fas fa-chevron-down toggle-icon" id="icon-9"></i>
+                        </span>
+                        <div class="rule-detail" id="detail-9">
+                            <p>María es la Madre de Hakuna. Acabar el día con un piropo, una oración o una canción a la Virgen es poner nuestra vida bajo su manto. Como nos enseña la consagración del amanecer, todo lo nuestro es suyo. María nos enseña a decir "sí" como Ella lo dijo, a vivir de rodillas, a estar junto a la Cruz sin huir. Cuidar a María es amarla, hablarle, confiarle nuestras alegrías y penas. Ella nos lleva siempre a su Hijo.</p>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+            </div>
+        </section>
+
+        <!-- ==================== ACABAR EL DÍA ==================== -->
+        <section id="oracion-noche">
+            <div class="glass-card collapsible-section">
+                <h2 class="section-header" onclick="toggleSection('oracion-noche-content')">
+                    <i class="fas fa-moon"></i> Acabar el día 
+                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-noche-content"></i>
+                </h2>
+                <div class="section-content" id="oracion-noche-content">
+                <div class="prayer-content">
+                    <p class="prayer-line" style="font-weight: 600; margin-bottom: 20px;">
+                        Gracias, Señor, por el día de hoy.
+                    </p>
+                    
+                    <p class="prayer-line">¿Qué te ha gustado?</p>
+                    <p class="prayer-line">¿Qué no te ha gustado?</p>
+                    <p class="prayer-line">¿Qué quieres que te regale mañana?</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <span class="toggle-detail" onclick="toggleNightAlternative()">
+                        Oración alternativa <i class="fas fa-chevron-down toggle-icon" id="icon-night-alt"></i>
+                    </span>
+                    <div class="rule-detail" id="night-alternative-prayer">
+                        <h4 style="margin-bottom: 10px; color: var(--primary);">Oración de la noche</h4>
+                        <p style="font-style: italic; text-align: center;">
+                            Padre, aquí al pie de la cama<br>
+                            mi alma se eleva hasta Ti para decirte:<br>
+                            creo en ti, espero en ti, te amo con todas mis fuerzas.<br>
+                            Gloria a ti, Señor.<br>
+                            Deposito en tus manos la fatiga y la lucha,<br>
+                            las alegrías y desencantos de este día que quedó atrás.<br><br>
+                            
+                            Si los nervios me traicionaron,<br>
+                            si los impulsos egoístas me dominaron,<br>
+                            si di entrada al rencor o a la tristeza, ¡perdón Señor!<br>
+                            Ten piedad de mí si he sido infiel.<br><br>
+                            
+                            Si pronuncié palabras vanas,<br>
+                            si me dejé llevar por la impaciencia,<br>
+                            si fui espina para alguien, ¡perdón Señor!<br>
+                            No quiero esta noche entregarme al sueño<br>
+                            sin sentir sobre mi alma la seguridad de tu dulce<br>
+                            y gratuita misericordia, Señor.<br><br>
+
+                            Te doy gracias, porque invisible, cariñoso, y envolvente<br>
+                            me has cuidado como una madre durante todo este día.<br>
+                            Señor, relaja mis nervios, sosiega mi espíritu,<br>
+                            suelta mis tensiones, inunda mi ser de silencio y serenidad.<br>
+                            Vela sobre mí, Padre querido, mientras me entrego confiado al sueño,<br>
+                            como un niño que duerme feliz en tus brazos.<br>
+                            En tu nombre, Señor, descansaré tranquilo.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SEPARADOR ==================== -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-text">
+                <i class="fas fa-book-open"></i> Para saber más
+            </div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- ==================== ¿QUÉ ES HAKUNA? ==================== -->
+        <section id="que-es-hakuna">
+            <div class="glass-card collapsible-section">
+                <h2 class="section-header" onclick="toggleSection('que-es-hakuna-content')">
+                    <i class="fas fa-heart"></i> ¿Qué es Hakuna? 
+                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-hakuna-content"></i>
+                </h2>
+                <div class="section-content info-section" id="que-es-hakuna-content">
+            
+            <p>Hakuna es una <strong>familia eucarística</strong> nacida en la Jornada Mundial de la Juventud de Río de Janeiro 2013, cuando el Papa Francisco nos convocó con estas palabras: <em>"¡Id! ¡No tengáis miedo! ¡Servid!"</em> Y también nos desafió: <em>"¡Hagan lío!"</em> – a no conformarnos, a atrevernos a cambiar el mundo con el Evangelio.</p>
+            
+            <p>Desde ese momento, miles de jóvenes de todo el mundo han encontrado en Hakuna un estilo de vida centrado en la Eucaristía, en María, y en la pasión por que <strong>"no se pierda ninguno"</strong>.</p>
+            
+            <p>El nombre <strong>Hakuna</strong> proviene del swahili y significa "no hay". Para nosotros, Hakuna significa: <em>"No hay nadie más loco"</em> que Cristo, que se quedó en el Pan por amor; <em>"No hay nada que temer"</em> porque Él está con nosotros; <em>"No hay nadie a quien no llegue su misericordia"</em>.</p>
+            
+            <p>Hakuna es un <strong>carisma misionero y eucarístico</strong>. Nacimos de la adoración, y desde ahí salimos a las periferias existenciales. Nuestra vocación es vivir <em>"arrodillados ante el misterio y ante cada rostro"</em>. Esto significa adorar a Jesús en la Eucaristía con todo el corazón, y ver su rostro en cada persona, especialmente en los más alejados y heridos.</p>
+            
+            <p>La vida en Hakuna se caracteriza por <strong>cuatro pilares fundamentales:</strong></p>
+            
+            <p>• La <strong>Eucaristía</strong> – especialmente la adoración eucarística y las Horas Santas<br>
+            • El amor a <strong>María</strong> – nuestra madre y modelo<br>
+            • La <strong>vida comunitaria</strong> – porque nadie se salva solo, vivimos en familia<br>
+            • La <strong>misión evangelizadora</strong> – salir a las calles, universidades, fiestas</p>
+            
+            <p>Hakuna tiene diferentes formas de pertenencia: hay quienes participan en las actividades (misiones, horas santas, convivencias), quienes se comprometen más profundamente como <strong>pringados</strong>, y quienes sienten la llamada a la vida consagrada. Pero todos compartimos el mismo sueño: <strong>enamorarnos de Cristo y contagiar ese amor al mundo</strong>.</p>
+            
+            <p>No somos una asociación más, ni un movimiento juvenil al uso. Hakuna es un <strong>estilo de vida</strong>, una forma concreta de vivir el Evangelio hoy. Es llevar <em>"cara de resucitados"</em> en medio de un mundo que a menudo vive como si Dios no existiera.</p>
+            
+            <p>Es atreverse a ser santos en lo ordinario: en la universidad, en el trabajo, en las fiestas, en la familia. Es vivir con alegría radical, sabiendo que Cristo ha vencido al mundo y que merece la pena entregarlo todo por Él.</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- ==================== ¿QUÉ ES SER PRINGADO? ==================== -->
+        <section id="que-es-pringado">
+            <div class="glass-card collapsible-section">
+                <h2 class="section-header" onclick="toggleSection('que-es-pringado-content')">
+                    <i class="fas fa-cross"></i> ¿Qué es ser Pringado de Hakuna? 
+                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-pringado-content"></i>
+                </h2>
+                <div class="section-content info-section" id="que-es-pringado-content">
+            
+            <p>Ser <strong>pringado</strong> es el compromiso laical concreto dentro de la familia Hakuna. La expresión, aparentemente coloquial, encierra una decisión radical: <em>“Me pringo, me mancho las manos, me lo juego todo por Cristo y su Iglesia”</em>. Es atreverse a ensuciarse en la trinchera del amor, sin medias tintas ni comodidades.</p>
+            
+            <p>Ser pringado no es simplemente participar en actividades o llevar una camiseta. Es <strong>abrazar el Decálogo del Pringado como estilo de vida</strong>, como camino diario de santidad. Estas diez reglas no son mandamientos externos que cumplir mecánicamente, sino un itinerario concreto para configurarse con Cristo y vivir el Evangelio sin rebajas.</p>
+            
+            <p>El pringado <strong>se compromete en serio</strong>. Asume con libertad y alegría un modo de vida exigente: consagración diaria, adoración eucarística, formación constante, acompañamiento espiritual, amor a los que sufren. No es un camino de perfección instantánea, sino de fidelidad perseverante, cayendo y levantándose mil veces, sostenido por la misericordia.</p>
+            
+            <p>El pringado vive <strong>en comunión</strong> con los demás miembros de Hakuna. No es un lobo solitario, sino parte de una familia. Por eso rezamos <em>"todos los días, todos por todos"</em>. Nos apoyamos mutuamente, nos corregimos fraternalmente, celebramos juntos, sufrimos juntos.</p>
+            
+            <p><strong>¿Qué implica concretamente ser pringado?</strong></p>
+            
+            <p>Implica consagrarse cada mañana a María • Sonreír y mirar a los ojos • Dedicar tiempo a los que sufren • Ofrecer el día a Cristo • Cuidar un sagrario • Participar de las Horas Santas • Formarse constantemente en la fe • Ser manantial de amor en el trabajo y las fiestas • Tener dirección espiritual • Vivir los sacramentos con frecuencia • Terminar el día con un gesto de cariño a la Virgen.</p>
+            
+            <p>Ser pringado es también aceptar <strong>la llamada misionera</strong>. No podemos quedarnos tranquilos sabiendo que hay tantos hermanos alejados de Cristo. El pringado tiene "los ojos abiertos" a los sedientos de amor, y se ofrece como instrumento para que Cristo los alcance.</p>
+            
+            <p>El compromiso del pringado es <strong>serio pero gozoso</strong>. No es una carga pesada, sino un yugo suave. Porque seguir a Cristo, cuando se hace de verdad, es la mayor aventura posible. Por eso el Decálogo incluye: <em>"Prohibido no disfrutar de seguir a Cristo"</em>.</p>
+            
+            <p>Ser pringado no es ser perfecto. Es caerse y levantarse mil veces, sabiendo que la misericordia de Dios nos sostiene. Es vivir la <strong>"no-medida de la cruz"</strong>, abrazando cada realidad con radicalidad, sin medias tintas.</p>
+            
+            <p>El pringado busca la <strong>santidad en lo ordinario</strong>. No necesitamos hacer cosas extraordinarias; necesitamos hacer lo ordinario con amor extraordinario. Por eso las reglas del pringado son sencillas: una sonrisa, una mirada, un rato de adoración, una lectura espiritual...</p>
+            
+            <p>Finalmente, ser pringado es <strong>vivir bajo el manto de María</strong>, Madre de Hakuna. Ella nos enseña a decir "sí" sin condiciones, a estar de pie junto a la cruz cuando todo se oscurece. Con María, solo sabemos decirle "sí" a Jesús.</p>
+            </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
