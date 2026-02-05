@@ -28,6 +28,42 @@ function toggleSection(sectionId) {
     icon.classList.toggle('open');
 }
 
+// ==================== FUNCIÓN PANTALLA COMPLETA ====================
+function toggleFullscreen() {
+    const btn = document.getElementById('fullscreen-btn');
+    const icon = btn.querySelector('i');
+    
+    if (!document.fullscreenElement) {
+        // Entrar en pantalla completa
+        document.documentElement.requestFullscreen().catch((err) => {
+            console.log('Error al intentar pantalla completa:', err);
+        });
+        icon.classList.remove('fa-expand');
+        icon.classList.add('fa-compress');
+    } else {
+        // Salir de pantalla completa
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+        icon.classList.remove('fa-compress');
+        icon.classList.add('fa-expand');
+    }
+}
+
+// Event listener para el botón de pantalla completa
+document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
+
+// Actualizar icono cuando se sale de pantalla completa con ESC
+document.addEventListener('fullscreenchange', function() {
+    const btn = document.getElementById('fullscreen-btn');
+    const icon = btn.querySelector('i');
+    
+    if (!document.fullscreenElement) {
+        icon.classList.remove('fa-compress');
+        icon.classList.add('fa-expand');
+    }
+});
+
 // ==================== CERRAR DESPLEGABLES AL HACER CLICK FUERA ====================
 document.addEventListener('click', function(event) {
     // Si el click no es en un toggle-detail ni en su contenido
