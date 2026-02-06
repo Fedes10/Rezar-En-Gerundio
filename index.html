@@ -4,32 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soy Pringado | Hakuna Lifestyle</title>
-    
+
+    <title>Reza en Gerundio | Orar Viviendo a la Hakuna</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="logo.jpg">
-    
-    <!-- Meta Tags para Redes Sociales -->
-    <meta name="description" content="Hakuna: Familia eucarística JMJ 2013. Vivir arrodillados ante el misterio y ante cada rostro. Descubre el Decálogo del Pringado y el estilo de vida Hakuna.">
-    
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:title" content="Soy Pringado | Hakuna Lifestyle">
-    <meta property="og:description" content="Hakuna: Familia eucarística JMJ 2013. Vivir arrodillados ante el misterio y ante cada rostro.">
+
+    <!-- SEO -->
+    <meta name="description" content="Reza en Gerundio: oraciones para empezar y acabar el día, el Decálogo del Pringado y el estilo de vida Hakuna.">
+
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:title" content="Reza en Gerundio">
+    <meta property="og:description" content="Oraciones diarias, Decálogo del Pringado y espiritualidad Hakuna. Rezar viviendo, vivir siendo todo tuyo.">
     <meta property="og:image" content="logo.jpg">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Soy Pringado | Hakuna Lifestyle">
-    <meta name="twitter:description" content="Hakuna: Familia eucarística JMJ 2013. Vivir arrodillados ante el misterio y ante cada rostro.">
+    <meta name="twitter:title" content="Reza en Gerundio">
+    <meta name="twitter:description" content="Rezar viviendo: oración diaria, Decálogo del Pringado y vida a la Hakuna.">
     <meta name="twitter:image" content="logo.jpg">
-    
+
     <!-- Fonts y Estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="estilos.css">
+
+    <!-- Scripts -->
+    <script src="santos.js"></script>
+    <script src="scripts.js"></script>
 </head>
+
 
 <body>
 
@@ -37,6 +44,17 @@
     <button id="fullscreen-btn" class="fullscreen-btn" title="Pantalla completa">
         <i class="fas fa-expand"></i>
     </button>
+
+    <!-- ==================== SWITCH MODO DÍA/NOCHE ==================== -->
+    <div class="theme-switch-wrapper" title="Cambiar modo">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+        </label>
+    </div>
 
     <!-- ==================== FORMAS DE FONDO ==================== -->
     <div class="bg-shape shape-1"></div>
@@ -46,7 +64,16 @@
 
         <!-- ==================== CABECERA ==================== -->
         <header>
-            <h1>Soy Pringado</h1>
+            <!-- Fecha a la izquierda -->
+            <div class="date-display">
+                <div class="day-number" id="day-number">5</div>
+                <div class="month-name" id="month-name">Febrero</div>
+            </div>
+            
+            <!-- Hora a la derecha -->
+            <div class="time-display" id="time-display">00:00</div>
+            
+            <h1>Reza en Gerundio</h1>
             <p class="subtitle">
                 "Ama la vida que se te ha dado"<br>
                 <strong>Hakuna:</strong> Familia Eucarística JMJ 2013 Papa Francisco.
@@ -56,11 +83,18 @@
         <!-- ==================== ORACIÓN AMANECER ==================== -->
         <section id="oracion-inicio">
             <div class="glass-card collapsible-section">
-                <h2 class="section-header" onclick="toggleSection('oracion-inicio-content')">
-                    <i class="fas fa-sun"></i> Empezar el día 
-                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-inicio-content"></i>
+                <h2 class="section-header">
+                    <span style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-sun"></i> Empezar el día
+                    </span>
+                    <span style="display: flex; align-items: center; gap: 8px; margin-left: auto;">
+                        <span class="daily-santo" id="daily-santo" style="font-size: 0.7em; font-style: italic; color: #888; font-weight: 400;"></span>
+                        <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-inicio-content"></i>
+                    </span>
                 </h2>
+                <div class="mobile-daily-text" id="mobile-daily-santo" style="display: none;"></div>
                 <div class="section-content" id="oracion-inicio-content">
+                <div id="all-santos-list" style="display: none; font-size: 0.8em; color: #666; margin-bottom: 12px; padding: 10px 14px; background: rgba(100,100,100,0.05); border-left: 3px solid rgba(100,100,100,0.2); border-radius: 4px; line-height: 1.5;"></div>
                 <div class="prayer-content">
                     <p class="prayer-line">
                         Oh Señora mía y Madre mía, yo me ofrezco por completo a ti,
@@ -101,10 +135,16 @@
         <!-- ==================== ORACIÓN DEL PRINGADO ==================== -->
         <section id="oracion-pringado">
             <div class="glass-card collapsible-section">
-                <h2 class="section-header" onclick="toggleSection('oracion-pringado-content')">
-                    <i class="fas fa-praying-hands"></i> Oración del Pringado 
-                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-pringado-content"></i>
+                <h2 class="section-header">
+                    <span style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-praying-hands"></i> Oración del Pringado
+                    </span>
+                    <span style="display: flex; align-items: center; gap: 8px; margin-left: auto;">
+                        <span class="daily-phrase" id="daily-phrase-pringado" style="font-size: 0.7em; font-style: italic; color: #888; font-weight: 400;"></span>
+                        <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-pringado-content"></i>
+                    </span>
                 </h2>
+                <div class="mobile-daily-text" id="mobile-daily-phrase-pringado" style="display: none;"></div>
                 <div class="section-content" id="oracion-pringado-content">
                 <div class="prayer-content">
                     <p class="prayer-line">Yo me entrego a ti, mi buen Dios, porque quiero pringarme por tu Iglesia
@@ -154,10 +194,16 @@
         <!-- ==================== DECÁLOGO DEL PRINGADO ==================== -->
         <section id="decalogo">
             <div class="glass-card collapsible-section">
-                <h2 class="section-header" onclick="toggleSection('decalogo-content')">
-                    <i class="fas fa-list-ol"></i> El Decálogo del Pringado 
-                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-decalogo-content"></i>
+                <h2 class="section-header">
+                    <span style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-list-ol"></i> El Decálogo del Pringado
+                    </span>
+                    <span style="display: flex; align-items: center; gap: 8px; margin-left: auto;">
+                        <span class="daily-decalogo" id="daily-decalogo" style="font-size: 0.7em; font-style: italic; color: #888; font-weight: 400;"></span>
+                        <i class="fas fa-chevron-down section-toggle-icon" id="icon-decalogo-content"></i>
+                    </span>
                 </h2>
+                <div class="mobile-daily-text" id="mobile-daily-decalogo" style="display: none;"></div>
                 <div class="section-content" id="decalogo-content">
             <div class="grid-container">
         
@@ -318,11 +364,18 @@
         <!-- ==================== ACABAR EL DÍA ==================== -->
         <section id="oracion-noche">
             <div class="glass-card collapsible-section">
-                <h2 class="section-header" onclick="toggleSection('oracion-noche-content')">
-                    <i class="fas fa-moon"></i> Acabar el día 
-                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-noche-content"></i>
+                <h2 class="section-header">
+                    <span style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-moon"></i> Acabar el día
+                    </span>
+                    <span style="display: flex; align-items: center; gap: 8px; margin-left: auto;">
+                        <span class="daily-maria" id="daily-maria" style="font-size: 0.7em; font-style: italic; color: #888; font-weight: 400;"></span>
+                        <i class="fas fa-chevron-down section-toggle-icon" id="icon-oracion-noche-content"></i>
+                    </span>
                 </h2>
+                <div class="mobile-daily-text" id="mobile-daily-maria" style="display: none;"></div>
                 <div class="section-content" id="oracion-noche-content">
+                <div id="daily-maria-detail" style="display: none; font-size: 0.8em; color: #666; margin-bottom: 12px; padding: 10px 14px; background: rgba(100,100,100,0.05); border-left: 3px solid rgba(100,100,100,0.2); border-radius: 4px; line-height: 1.5;"></div>
                 <div class="prayer-content">
                     <p class="prayer-line" style="font-weight: 600; margin-bottom: 20px;">
                         Gracias, Señor, por el día de hoy.
@@ -385,7 +438,7 @@
         <!-- ==================== ¿QUÉ ES HAKUNA? ==================== -->
         <section id="que-es-hakuna">
             <div class="glass-card collapsible-section">
-                <h2 class="section-header" onclick="toggleSection('que-es-hakuna-content')">
+                <h2 class="section-header">
                     <i class="fas fa-heart"></i> ¿Qué es Hakuna? 
                     <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-hakuna-content"></i>
                 </h2>
@@ -418,7 +471,7 @@
         <!-- ==================== ¿QUÉ ES SER PRINGADO? ==================== -->
         <section id="que-es-pringado">
             <div class="glass-card collapsible-section">
-                <h2 class="section-header" onclick="toggleSection('que-es-pringado-content')">
+                <h2 class="section-header">
                     <i class="fas fa-cross"></i> ¿Qué es ser Pringado de Hakuna? 
                     <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-pringado-content"></i>
                 </h2>
@@ -451,8 +504,6 @@
 
     </div>
 
-    <!-- ==================== SCRIPTS ==================== -->
-    <script src="scripts.js"></script>
 </body>
 
 </html>
